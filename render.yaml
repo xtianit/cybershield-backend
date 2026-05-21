@@ -1,10 +1,10 @@
 services:
   - type: web
     name: cybershield-backend
-    env: node
-    healthCheckPath: /api/health  # <--- Add this line
+    runtime: node  # This is the correct property for specifying Node.js
     buildCommand: npm install
     startCommand: node --experimental-sqlite server.js
+    healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
         value: production
