@@ -1,1 +1,16 @@
+code(
+        'services:',
+        '  - type: web',
+        '    name: cybershield-backend',
+        '    runtime: node',
+        '    buildCommand: npm install',
+        '    startCommand: node --experimental-sqlite server.js',
+        '    envVars:',
+        '      - key: NODE_ENV',
+        '        value: production',
+        '      - key: JWT_SECRET',
+        '        sync: false',
+        '      - key: FRONTEND_URL',
+        '        sync: false',
+      ),
 
